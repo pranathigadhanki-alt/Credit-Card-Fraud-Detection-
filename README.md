@@ -1,5 +1,4 @@
-Credit Card Fraud Detection – Exploratory Analysis
-Project Overview
+Credit Card Fraud Detection – Exploratory Analysis Project Overview
 
 This project performs an exploratory analysis of the Credit Card Fraud Detection dataset from Kaggle, focusing on understanding the dataset structure, identifying suspicious transaction patterns, and visualizing trends in transaction amounts. The goal is to build foundational understanding and insights before developing any machine learning models. The analysis is implemented in Google Colab and is designed for a beginner-level workflow without predictive modeling.
 
@@ -31,36 +30,40 @@ Counted occurrences of fraudulent and non-fraudulent transactions to confirm cla
 
 Suspicious Pattern Detection
 
-Identified transactions above the 99th percentile of the Amount feature as potentially suspicious.
+Identified transactions with amounts greater than the 99th percentile as potentially suspicious.
 
-Compared descriptive statistics of the Amount feature between fraudulent and non-fraudulent transactions.
+Compared the amount distributions between fraudulent and non-fraudulent transactions.
 
 Data Visualization
 
-Created histograms with KDE plots for the Amount variable, separated by fraud and non-fraud classes.
-
-Highlighted differences in the amount distribution between the two transaction types.
+Created histograms for transaction amounts, separated by fraud and non-fraud classes, to visually compare distributions.
 
 Key Results
 
-Dataset Size: 284,807 transactions × 31 columns.
+Dataset size: 284,807 transactions × 31 columns.
 
-Class Distribution:
+Class distribution: 284,315 non-fraud vs. 492 fraud cases (~0.1727% fraud rate).
 
-Non-fraud: 284,315 transactions
+99th percentile transaction amount: approximately 1,017.97.
 
-Fraud: 492 transactions (~0.1727%)
+Median amount:
 
-99th Percentile Transaction Amount: Approximately $1,017.97.
+Non-fraudulent transactions: 22.00
 
-Amount Summary (Median / Mean / Max):
+Fraudulent transactions: 9.25
 
-Non-fraud: Median = $22.00, Mean = $88.29, Max = $25,691.16
+Mean amount:
 
-Fraud: Median = $9.25, Mean = $122.21, Max = $2,125.87
+Non-fraudulent transactions: 88.29
 
-Fraudulent transactions often involve smaller amounts than non-fraudulent transactions, though high-value fraudulent cases do exist.
+Fraudulent transactions: 122.21
+
+Maximum amounts:
+
+Non-fraudulent: 25,691.16
+
+Fraudulent: 2,125.87
 
 Insights
 
-The analysis confirmed the dataset’s extreme class imbalance and revealed distinct patterns in transaction amounts for fraudulent vs. non-fraudulent transactions. Fraudulent transactions tend to cluster at lower amounts, but the presence of large fraudulent transactions suggests that high-value monitoring is still important.
+Fraudulent transactions often involve smaller amounts than non-fraudulent transactions, although there are notable cases of high-value fraud. The dataset’s extreme class imbalance highlights the importance of using precision and recall over accuracy in future predictive modeling.
